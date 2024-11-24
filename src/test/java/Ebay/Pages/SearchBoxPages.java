@@ -30,7 +30,7 @@ public class SearchBoxPages extends Utility {
         String expectedTitle = "Soap for sale | eBay";
         String actualTitle = Driver.getDriver().getTitle();
         Assert.assertEquals(actualTitle, expectedTitle);
-      //  Driver.getDriver().close();
+
 
        // System.out.println(expectedTitle);
        // System.out.println(actualTitle);
@@ -39,12 +39,13 @@ public class SearchBoxPages extends Utility {
     public void iShouldSeeAMessage() {
         String expectedResult = "No exact matches found";
         String actualResult = sbe.noExactMatch.getText();
-      //  System.out.println(expectedResult + " " + actualResult);
+        System.out.println(expectedResult + " " + actualResult);
         Assert.assertEquals(actualResult, expectedResult);
-    }
+      
+   }
     public void iEnterInValidProductOnSearchBox() {
         sbe.searchBox.click();
-        waits(1);
+       // waits(1);
     }
     public void enterInvalidProduct() {
         sbe.searchBox.sendKeys("invalid23455");
