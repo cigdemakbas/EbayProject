@@ -44,7 +44,7 @@ public class SearchBoxPages extends Utility {
     }
     public void iEnterInValidProductOnSearchBox() {
         sbe.searchBox.click();
-        waits(1);
+       // waits(1);
     }
     public void enterInvalidProduct() {
         sbe.searchBox.sendKeys("invalid23455");
