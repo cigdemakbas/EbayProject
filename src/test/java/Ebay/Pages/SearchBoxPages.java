@@ -30,7 +30,7 @@ public class SearchBoxPages extends Utility {
         String expectedTitle = "Soap for sale | eBay";
         String actualTitle = Driver.getDriver().getTitle();
         Assert.assertEquals(actualTitle, expectedTitle);
-      //  Driver.getDriver().close();
+
 
        // System.out.println(expectedTitle);
        // System.out.println(actualTitle);
