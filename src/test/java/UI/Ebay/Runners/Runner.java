@@ -1,4 +1,4 @@
-package UI.Ebay.StepDefinitions;
+package UI.Ebay.Runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
