@@ -6,7 +6,7 @@ Feature: Validate and test all categories in the application
     Given Go to the home page
     When Click the categories section
     And User should click and navigate every category
-      | ll Categories                 |
+      | All Categories                 |
       | Antiques                       |
       | Art                            |
       | Baby                           |
