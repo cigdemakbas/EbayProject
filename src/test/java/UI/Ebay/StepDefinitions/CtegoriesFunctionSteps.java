@@ -34,8 +34,8 @@ public class CtegoriesFunctionSteps extends SearchBoxElements {
 
         for (int i = 0; i < categoriesList.size(); i++) {
             String dropdownText = categoriesList.get(i).getText();
-//            list.selectByVisibleText(dropdownText);
-//            String expectedText = myList.get(i);
+            list.selectByVisibleText(dropdownText);
+            String expectedText = myList.get(i);
             Assert.assertEquals(expectedText,dropdownText);
         }
 
