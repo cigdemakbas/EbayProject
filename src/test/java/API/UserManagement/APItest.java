@@ -20,6 +20,6 @@ public class APItest {
                 .body("id", equalTo(1)) // Validate response body contains "id": 1
                 .body("userId", equalTo(1)) // Validate response body contains "userId": 1
                 .body("title", notNullValue()) // Validate title field is not null
-                .log().all(); // Log the full response
+                .log().all(); // Log the full responsee
     }
 }
