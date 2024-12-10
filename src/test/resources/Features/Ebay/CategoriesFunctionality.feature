@@ -2,6 +2,7 @@ Feature: Validate and test all categories in the application
   As a user
   I want to ensure all categories function correctly
 
+  @smoke
   Scenario: Ensure that all categories functions work correctly
     Given Go to the home page
     When Click the categories section

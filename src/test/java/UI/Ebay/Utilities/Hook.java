@@ -27,7 +27,8 @@ public class Hook {
             System.out.println("Clean Up started for: " + scenario.getName());
         }
         System.out.println("Ending scenario: " + scenario.getName());
-        Driver.closeDriver(); // Ensure proper cleanup between scenarios
+        Driver.getDriver().close(); // Ensure proper cleanup between scenarios
+
     }
 
 }
