@@ -6,6 +6,7 @@ import UI.Ebay.Utilities.ConfigReader;
 import UI.Ebay.Utilities.Driver;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
+import io.netty.handler.codec.http.TooLongHttpHeaderException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -33,7 +34,7 @@ public class EbaySimpleSteps extends TestBase {
 
             // Enter the search term
             sbe.searchBox.sendKeys(searchTerm);
-
+            Thread.sleep(1000);
             // Click the search button
             sbe.clickSB.click();
 
