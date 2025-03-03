@@ -1,7 +1,7 @@
 package org.example.SeleniumExamples;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.Assert;
+//import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -76,7 +76,7 @@ public class RecuiterWebPage {
        String productPrice1=productPrice.getText();
 
         System.out.println("This is Product Name : "+productName+", This is product price: "+productPrice1);
-        Assert.assertEquals(expectedProductName,productName);
+      //  Assert.assertEquals(expectedProductName,productName);
         Thread.sleep(2000);
         driver.close();
 

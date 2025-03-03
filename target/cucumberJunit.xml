@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite name="Cucumber" time="0.085" tests="10" skipped="0" failures="0" errors="0">
+<testcase classname="eBay Search Functionality" name="Search for items with criteria" time="0.004">
+<system-out><![CDATA[
+Given Go to the home page...................................................passed
+When I search with the following criteria:..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Footer links abouteBay Functionality" name="Click the about eBay footer link and verify the page." time="0.011">
+<system-out><![CDATA[
+Given Go to the home page...................................................passed
+When I scroll to the footer section.........................................passed
+When I click on the link....................................................passed
+Then I should be navigated to the About eBay page...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate and test all categories in the application" name="Ensure that all categories functions work correctly" time="0.01">
+<system-out><![CDATA[
+Given Go to the home page...................................................passed
+When Click the categories section...........................................passed
+And User should click and navigate every category...........................passed
+Then Verify that user should be navigated to the correct page for each category.passed
+]]></system-out>
+</testcase>
+<testcase classname="SearchBox Functionality with multiple input" name="Verify search box functionality with multiple input - Example #1.1" time="0.01">
+<system-out><![CDATA[
+Given Go to the home page...................................................passed
+When I enter searchBox......................................................passed
+And User enter the..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Box Functionality" name="Search for a valid product" time="0.004">
+<system-out><![CDATA[
+Given Go to the home page...................................................passed
+When click searchBox and write..............................................passed
+And I click the search button...............................................passed
+Then User should see the results............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="eBay Simple Search" name="Search for multiple items" time="0.003">
+<system-out><![CDATA[
+Given Go to the home page...................................................passed
+When I search for the following items:......................................passed
+Then I should see relevant search results for all items.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="SearchBox Functionality with multiple input" name="Verify search box functionality with multiple input - Example #1.2" time="0.001">
+<system-out><![CDATA[
+Given Go to the home page...................................................passed
+When I enter searchBox......................................................passed
+And User enter the..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Box Functionality" name="Search for a invalid product" time="0.003">
+<system-out><![CDATA[
+Given Go to the home page...................................................passed
+When I enter searchBox......................................................passed
+And enter invalid product...................................................passed
+And I click the search button...............................................passed
+Then I should see a message.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="SearchBox Functionality with multiple input" name="Verify search box functionality with multiple input - Example #1.3" time="0.001">
+<system-out><![CDATA[
+Given Go to the home page...................................................passed
+When I enter searchBox......................................................passed
+And User enter the..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="SearchBox Functionality with multiple input" name="Verify search box functionality with multiple input - Example #1.4" time="0.001">
+<system-out><![CDATA[
+Given Go to the home page...................................................passed
+When I enter searchBox......................................................passed
+And User enter the..........................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

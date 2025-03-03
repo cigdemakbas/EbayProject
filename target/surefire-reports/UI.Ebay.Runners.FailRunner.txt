@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: UI.Ebay.Runners.FailRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.004 s <<< FAILURE! - in UI.Ebay.Runners.FailRunner
-initializationError(UI.Ebay.Runners.FailRunner)  Time elapsed: 0.004 s  <<< ERROR!
-io.cucumber.core.exception.CucumberException: Failed to parse 'target/rerun.txt'
-Caused by: java.nio.file.NoSuchFileException: target/rerun.txt
-
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in UI.Ebay.Runners.FailRunner

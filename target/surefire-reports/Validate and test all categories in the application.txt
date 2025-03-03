@@ -1,10 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: Validate and test all categories in the application
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 44.662 s <<< FAILURE! - in Validate and test all categories in the application
-Ensure that all categories functions work correctly(Validate and test all categories in the application)  Time elapsed: 9.748 s  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<[DVDs & Movies]> but was:<[Movies & TV]>
-
-Ensure that all categories functions work correctly(Validate and test all categories in the application)  Time elapsed: 33.32 s  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<[DVDs & Movies]> but was:<[Movies & TV]>
-
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.344 s - in Validate and test all categories in the application

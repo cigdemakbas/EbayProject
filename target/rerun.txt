@@ -1,6 +1,0 @@
-file:src/test/resources/Features/Ebay/EbaySimpleSearchDataTable.feature:6
-file:src/test/resources/Features/Ebay/SearchBox.feature:5:11
-file:src/test/resources/Features/Ebay/ScenarioOutlineSearchBox.feature:14:15:16:17
-file:src/test/resources/Features/Ebay/CategoriesFunctionality.feature:6
-file:src/test/resources/Features/Ebay/SearchBoxDataTable.feature:7
-file:src/test/resources/Features/Ebay/FootereBayAbout.feature:5

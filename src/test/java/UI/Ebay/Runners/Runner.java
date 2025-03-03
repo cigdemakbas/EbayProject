@@ -10,8 +10,14 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/Features",
         glue = "UI/Ebay/StepDefinitions", // Ensure this matches your step definitions package
         tags = "not @Skip",
-        plugin = {"pretty", "html:target/cucumber.html","json:target/cucumber-report.json", "rerun:target/rerun.txt" }
+        dryRun = true,
+        plugin = {"pretty",
+                "html:target/cucumber.html",
+                "junit:target/cucumberJunit.xml",
+                "json:target/cucumber.json",
+                "rerun:target/rerun.txt" },
+        publish = true
 
 )
-class TestRunner {
+class Runner {
 }

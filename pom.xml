@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,6 +27,13 @@
             <artifactId>cucumber-junit</artifactId>
             <version>7.11.1</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -37,6 +45,11 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.28</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.3.2</version>
         </dependency>
         <dependency>
             <groupId>com.github.javafaker</groupId>
@@ -62,6 +75,13 @@
             <artifactId>poi</artifactId>
             <version>4.1.2</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>5.6.1</version>
+        </dependency>
+
         <!-- To work with all types of files: -->
         <dependency>
             <groupId>org.apache.poi</groupId>
@@ -74,6 +94,20 @@
             <artifactId>applescript</artifactId>
             <version>0.0.5</version>
         </dependency>
+            <!-- Log4j Core -->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>2.20.0</version> <!-- Use the latest version -->
+            </dependency>
+
+            <!-- Log4j API -->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>2.20.0</version>
+            </dependency>
+
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-devtools-v114</artifactId>
@@ -108,25 +142,49 @@
             <artifactId>hamcrest</artifactId>
             <version>2.2</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <!-- https://mvnrepository.com/artifact/org.apache.maven/maven-plugin-api -->
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-plugin-api</artifactId>
+            <version>4.0.0-rc-2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.devcon5</groupId>
+            <artifactId>pageobjects</artifactId>
+            <version>0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.30</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
     <plugins>
-    <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0</version> <!-- Use a compatible version -->
-        <configuration>
-            <includes>
-                <include>**/*Test.java</include>
-            </includes>
-        </configuration>
-    </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.11.0</version> <!-- Use the latest version -->
+            <configuration>
+                <source>17</source> <!-- Specify your Java version -->
+                <target>17</target> <!-- Specify your Java version -->
+            </configuration>
+        </plugin>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
             <version>3.0.0-M1</version>
             <configuration>
-                <parallel>methods</parallel>
+                  <parallel>methods</parallel>
                 <!--  <useUnlimitedThreads>true</useUnlimitedThreads>-->
                 <threadCount>5</threadCount>
                 <!-- <perCoreThreadCount>false</perCoreThreadCount>-->
@@ -137,25 +195,32 @@
                 </includes>
             </configuration>
         </plugin>
+
         <plugin>
             <groupId>net.masterthought</groupId>
             <artifactId>maven-cucumber-reporting</artifactId>
             <version>3.10.0</version>
             <executions>
                 <execution>
-                    <id>execution</id>
+                    <id>generate-cucumber-report</id> <!-- Renamed the execution ID for clarity -->
                     <phase>verify</phase>
                     <goals>
                         <goal>generate</goal>
                     </goals>
                     <configuration>
-                        <projectName>Smoke Test</projectName>
-                        <outputDirectory>${project.build.directory}/myReports</outputDirectory>
+                        <!-- Dynamic project name based on artifactId -->
+                        <projectName>EbayProject2</projectName>
+
+                        <!-- Ensure the output directory is under target and has the report -->
+                        <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
+
+                        <!-- Path to the Cucumber JSON output -->
                         <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
                     </configuration>
                 </execution>
             </executions>
         </plugin>
+
     </plugins>
     </build>
 </project>

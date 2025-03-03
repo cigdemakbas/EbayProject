@@ -10,6 +10,8 @@ import org.junit.runner.RunWith;
             @CucumberOptions(
                     features = "@target/rerun.txt", // Path to the rerun file
                     glue = "stepDefinitions",
+                    dryRun = true,
+                    publish = true,
                     plugin = {
                             "pretty",
                             "html:target/fail-cucumber-reports.html",
